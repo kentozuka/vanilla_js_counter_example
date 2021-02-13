@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Counter</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="reset.css"> <!-- resetを先に読み込む(上書き防止)-->
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- js -->
+  <script src="app.js"></script>
+  <!-- domcontentloadedを待てばここに書いても問題ない -->
+</head>
+
+<body>
+  <main>
+    <div class="holder">
+      <div class="top">
+        <h2 id="counter">
+          COUNTERS
+        </h2>
+      </div>
+      <div class="middle">
+        <div id="empty">
+          <h3>You don't have any counters yet.<br>Click the button below to start counting!</h3>
+        </div>
+        <ul id="target" class="hidden">
+        </ul>
+      </div>
+      <div class="bottom">
+        <button class="btn-blue" onclick="toggle()">Add a counter</button>
+        <p onclick="reset()" style="text-align: center; padding-top: 0.3rem; cursor: pointer;">reset</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="modal" class="hidden">
+    <form onsubmit="addCounter(event)" name="counterForm" novalidate>
+      <h2 style="padding-bottom: 0.4rem;">Type in!</h2>
+      <input name="title" type="text" placeholder="counter name" class="input">
+      <input name="description" type="text" placeholder="description" class="input">
+      <div>
+        <!-- ただのbuttonにしないと飛んじゃう -->
+        <button type="button" onclick="toggle()">cancel</button>
+        <button type="submit">add</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- js -->
+  <!-- これするとhtmlが読み込まれてからjsを読み込める上から下だから -->
+  <!-- /**
+     * Local Storage
+     * https://developer.mozilla.org/ja/docs/Web/API/Window/localStorage
+     */ -->
+</body>
+
+</html>

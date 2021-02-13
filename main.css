@@ -1,0 +1,148 @@
+/* tyouhuku */
+button {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: #6d98f7;
+  color: #ffffff;
+}
+
+.hidden {
+  /* !important (bang important) 
+  overrides everything
+  regardless of the order being used */
+  display: none !important;
+}
+
+/* hutsuuno */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.holder {
+  width: 50%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  /* コピペした */
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  border: 1px solid #eeeeee;
+}
+
+.holder .top {
+  padding: 2rem 0;
+}
+#counter {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.holder .middle {
+  width: 100%;
+}
+.holder .middle ul {
+  width: 100%;
+  height: 14rem;
+  display: flex;
+  overflow-y: scroll;
+}
+.holder .middle ul .counter-item {
+  flex: none;
+  width: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid #3a3a3a;
+  border-radius: 1rem;
+  margin-right: 0.4rem;
+}
+.holder .middle ul .counter-item h3 {
+  font-weight: bold;
+}
+.holder .middle ul .counter-item p {
+  padding: 0.6rem 0;
+  /* truncate */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.holder .middle ul .counter-item .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.holder .middle ul .counter-item .buttons button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  font-size: 1.4rem;
+}
+
+#empty {
+  width: 24rem;
+  height: 14rem;
+  margin: auto;
+  background-color: #eeeeee;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#empty h3 {
+  text-align: center;
+  line-height: 2rem;
+  color: #3a3a3a;
+}
+
+.holder .bottom {
+  padding: 1rem 0;
+}
+.holder .bottom > button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 50rem;
+  font-size: 1.2rem;
+}
+
+#modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+#modal form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #d9d9d9;
+}
+#modal form .input {
+  padding: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+#modal form div {
+  margin: auto;
+  padding-top: 0.4rem;
+}
